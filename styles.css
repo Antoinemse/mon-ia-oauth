@@ -1,0 +1,279 @@
+:root {
+  --ink: #171713;
+  --paper: #f2f0e8;
+  --acid: #e8ff4f;
+  --line: rgba(23, 23, 19, 0.28);
+  --muted: #5c5c54;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(23, 23, 19, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 19, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.22em;
+}
+
+.site-header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 3vw;
+  border-bottom: 1px solid var(--line);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.wordmark {
+  display: inline-block;
+  padding: 0.48rem 0.6rem 0.38rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+
+.hero {
+  min-height: 68vh;
+  padding: clamp(5rem, 10vw, 9rem) 6vw 6rem;
+  display: grid;
+  align-content: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-wrap: pretty;
+}
+
+h1 {
+  max-width: 17ch;
+  margin: 0;
+  font-family: "Iowan Old Style", "Baskerville", serif;
+  font-size: clamp(3.2rem, 8vw, 8.5rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.lede {
+  max-width: 63ch;
+  margin: 2.4rem 0 0 auto;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+}
+
+.actions {
+  margin: 2rem 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.button {
+  padding: 0.9rem 1.15rem;
+  background: var(--acid);
+  border: 1px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.text-link {
+  font-weight: 700;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: minmax(5rem, 16vw) 1fr;
+  gap: 2rem;
+  padding: 5rem 6vw 7rem;
+}
+
+.section-number {
+  font-family: "Iowan Old Style", "Baskerville", serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ink);
+}
+
+h2 {
+  margin: 0 0 3rem;
+  font-family: "Iowan Old Style", "Baskerville", serif;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--ink);
+}
+
+.principle-grid article {
+  padding: 1.5rem 2rem 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.principle-grid article + article {
+  padding-left: 2rem;
+  border-left: 1px solid var(--line);
+}
+
+h3 {
+  margin: 0 0 1rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.principle-grid p,
+.policy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.policy-layout {
+  display: grid;
+  grid-template-columns: minmax(14rem, 24vw) minmax(0, 1fr);
+  gap: 5vw;
+  padding: 6rem 6vw 8rem;
+}
+
+.policy-layout aside {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.policy-date {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.policy h1 {
+  margin-bottom: 5rem;
+  font-size: clamp(3.2rem, 6vw, 6.5rem);
+}
+
+.policy section {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.8fr) minmax(18rem, 1.4fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.policy h2 {
+  margin: 0;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy p {
+  margin: 0;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  footer {
+    padding-inline: 1.2rem;
+  }
+
+  .hero,
+  .principles,
+  .policy-layout {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .lede,
+  .actions {
+    margin-left: 0;
+  }
+
+  .principles,
+  .policy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .section-number {
+    font-size: 4rem;
+  }
+
+  .principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-grid article + article {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .policy-layout aside {
+    position: static;
+  }
+
+  .policy section {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
